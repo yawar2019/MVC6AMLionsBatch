@@ -12,12 +12,21 @@ namespace MVC6AMLionsBatch
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.MapMvcAttributeRoutes();
+
 
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+               name: "Default1",
+               url: "Toy/Car",
+               defaults: new { controller = "student", action = "GetView", id = UrlParameter.Optional }
+           );
+
+
+            routes.MapRoute(
+               name: "Default",
+               url: "{controller}/{action}/{id}",
+               defaults: new { controller = "Student", action = "GetView", id = UrlParameter.Optional }
+           );
         }
     }
 }
