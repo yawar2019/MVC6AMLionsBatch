@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC6AMLionsBatch", "MVC6AMLionsBatch\MVC6AMLionsBatch.csproj", "{41076438-554E-40DD-9B1A-EC55424E94F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{B00CAD53-E445-4421-BFAC-1E01D20FA1A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetExample", "AdoNetExample\AdoNetExample.csproj", "{C0518721-AE79-4662-9153-08340C6BA6A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{41076438-554E-40DD-9B1A-EC55424E94F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41076438-554E-40DD-9B1A-EC55424E94F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41076438-554E-40DD-9B1A-EC55424E94F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B00CAD53-E445-4421-BFAC-1E01D20FA1A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B00CAD53-E445-4421-BFAC-1E01D20FA1A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B00CAD53-E445-4421-BFAC-1E01D20FA1A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B00CAD53-E445-4421-BFAC-1E01D20FA1A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0518721-AE79-4662-9153-08340C6BA6A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0518721-AE79-4662-9153-08340C6BA6A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0518721-AE79-4662-9153-08340C6BA6A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0518721-AE79-4662-9153-08340C6BA6A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

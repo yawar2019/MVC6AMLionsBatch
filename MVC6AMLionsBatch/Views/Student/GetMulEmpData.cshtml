@@ -1,0 +1,14 @@
+﻿@model List<MVC6AMLionsBatch.Models.Employee>
+@{
+    ViewBag.Title = "GetMulEmpData";
+}
+
+<h2>GetMulEmpData</h2>
+ 
+
+@foreach (var item in Model)
+{
+   @item.EmpId<br /> 
+   @item.EmpName<br />
+   @item.EmpSalary   <br /><br />
+}

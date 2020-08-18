@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_MyLayout</title>
+</head>
+<body>
+    <div id="divheader" height="200px" width="100%" style="background-color:black;color:white;">
+        <center><h1>Library Management System</h1></center>
+    </div>
+   @RenderSection("MySection123");
+    <div id="divBody" height="100%" width="20%" style="background-color:deepskyblue;color:black;">
+       
+         <center>
+           @RenderBody()
+        </center>
+    </div>
+    <div id="divFooter" height="200px" width="100%" style="background-color:black;color:white;">
+        <center>CopyRight@@2020</center>
+    </div>
+</body>
+</html>
