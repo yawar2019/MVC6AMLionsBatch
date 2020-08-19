@@ -28,5 +28,16 @@ namespace AdoNetExample.Models
             }
             return listobj;
         }
+
+        public int SaveAuthors(AuthorModel obj) {
+            SqlCommand cmd = new SqlCommand("spr_insertAuthor", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            cmd.Parameters.AddWithValue("@Authname", obj.AuthorName);
+            cmd.Parameters.AddWithValue("@Description", obj.Description);
+            int result = cmd.ExecuteNonQuery();
+            con.Close();
+            return result;
+        }
     }
 }

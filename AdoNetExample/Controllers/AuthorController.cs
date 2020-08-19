@@ -14,5 +14,25 @@ namespace AdoNetExample.Controllers
         {
             return View(db.GetAuthors());
         }
+        [HttpGet]
+        public ActionResult Create() {
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(AuthorModel Authobj)
+        {
+            int i = db.SaveAuthors(Authobj);
+            if (i > 0)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
+            
+        }
+
     }
 }
