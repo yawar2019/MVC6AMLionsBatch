@@ -33,6 +33,52 @@ namespace AdoNetExample.Controllers
             }
             
         }
+        [HttpGet]
+        public ActionResult Edit(int? id)
+        {
+            AuthorModel auth = db.getAuthodById(id);
+            return View(auth);
+        }
+        [HttpPost]
+        public ActionResult Edit(FormCollection frm)
+        {
+            AuthorModel obj = new Models.AuthorModel();
+            obj.AuthorId = Convert.ToInt32(frm[0]);
+            obj.AuthorName = Convert.ToString(frm[1]);
+            obj.Description = Convert.ToString(frm[2]);
 
+            int i = db.EditAuthors(obj);
+            if (i > 0)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+
+        [HttpGet]
+        public ActionResult Delete(int? id)
+        {
+            AuthorModel auth = db.getAuthodById(id);
+            return View(auth);
+        }
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int?id)
+        {
+            
+            int i = db.DeleteAuthors(id);
+            if (i > 0)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
+        }
     }
 }

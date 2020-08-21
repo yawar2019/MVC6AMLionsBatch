@@ -1,0 +1,15 @@
+﻿@model AdoNetExample.Models.AuthorModel
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2>Delete</h2>
+<h1>Are you sure you want to delete record?</h1>
+@Model.AuthorId<br />
+@Model.AuthorName<br />
+@Model.Description
+
+<form action="~/Author/Delete/@Model.AuthorId" method="post">
+    <input type="submit" value="Delete" class="btn btn-danger" />
+</form>

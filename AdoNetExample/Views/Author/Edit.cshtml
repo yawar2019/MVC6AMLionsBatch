@@ -1,0 +1,17 @@
+﻿@model AdoNetExample.Models.AuthorModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<form action="~/Author/Edit" method="post">
+    <input type="hidden" id="AuthorId" name="AuthorId" value="@Model.AuthorId" /><br />
+
+    <label>AuthorName</label>
+    <input type="text" id="Name" name="AuthorName" value="@Model.AuthorName" /><br />
+    <label>Description</label>
+    <input type="text" id="Description" name="Description" value="@Model.Description" /><br />
+    <input type="submit" value="Edit" class="btn btn-success" />
+</form>
