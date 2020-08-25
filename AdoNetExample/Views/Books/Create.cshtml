@@ -1,0 +1,47 @@
+﻿@model AdoNetExample.Models.BookModel
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+@*<form action="~/Books/Create" method="post">*@
+@using(Html.BeginForm("Create", "Books", FormMethod.Post, new { enctype = "multipart/form-data" })){
+<h2>Create</h2>
+@Html.Label("BookName")
+@Html.TextBox("bkBookName", "C langauage", new { @class = "form-control", @style = "background-color:orange;font-size:large", @readonly = true })
+@*<input type="text" class="form-control" id="BookId" name="bookid" value="C++" style="background-color:orange;font-size:large" />
+    @Html.TextBoxFor(bk=>bk.BookName, new { @style = "background-color:orange;font-size:large", @readonly = true })*@
+@Html.Label("Category")
+@Html.DropDownList("bkCategory", null, new { @class = "form-control" })
+@Html.Label("Author")
+@Html.DropDownList("bkAuthor", (IEnumerable<SelectListItem>)ViewBag.bkAuthor, "Select Author", new { @class = "form-control" })
+@Html.Label("Price")
+@Html.TextBoxFor(bk => bk.Price, new { @class = "form-control" })
+@Html.Label("Quantity")
+@Html.TextBoxFor(bk => bk.Quantity, new { @class = "form-control" })
+@Html.Label("Publish Date")
+@Html.TextBoxFor(bk => bk.PublishDate, new { @class = "form-control", @type = "date" })
+@Html.Label("Upload Image")
+@Html.TextBoxFor(bk => bk.ImageName, new { @class = "form-control", @type = "file" })
+
+
+<input type="submit" value="save" />
+}
+@*</form>*@
+<br />
+<br />
+@*Html Helper Examples*@
+@*<label>Password:</label>@Html.Password("txtpwd")<br />
+    <label>Gender</label>@Html.RadioButton("rbgender", "Male", true)<span>Male</span>@Html.RadioButton("rbgender", "Female")<span>Female</span><br />
+
+    <label>Choose Courses</label>@Html.CheckBox("dotnet")<span>Dotnet</span>@Html.CheckBox("Java")<span>Java</span><br />
+
+    <label>Select Country</label>@Html.DropDownList("Country", new List<SelectListItem>()
+    {
+        new SelectListItem {Text="India",Value="1" },
+        new SelectListItem {Text="China",Value="2",Selected=true},
+        new SelectListItem {Text="Bangladesh",Value="3" }
+
+    }, "select Country")<br />
+
+
+    <label>Comments</label> @Html.TextArea("comments", null, 5, 10, null)*@
