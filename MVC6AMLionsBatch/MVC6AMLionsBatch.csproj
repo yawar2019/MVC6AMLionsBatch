@@ -142,6 +142,7 @@
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\EmpDept.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="MyFilter\CustomFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +170,8 @@
     <Content Include="Views\Default\Index1.cshtml" />
     <Content Include="Views\Student\Home.cshtml" />
     <Content Include="Views\Shared\_MyLayout.cshtml" />
+    <Content Include="Views\Default\ExampleViewData.cshtml" />
+    <Content Include="Views\Default\ExampleViewData2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

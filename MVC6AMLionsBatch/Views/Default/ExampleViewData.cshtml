@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ExampleViewData</title>
+</head>
+<body>
+    <div>
+        <ul>
+            @*@foreach (string item in ViewData["Student"] as List<string>)
+                {
+
+                    <li>@item</li>
+                }*@
+            @foreach (string item in TempData["Students"] as List<string>)
+            {
+
+                <li>@item</li>
+            }
+        </ul>
+    </div>
+</body>
+</html>

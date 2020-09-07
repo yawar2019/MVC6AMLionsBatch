@@ -1,4 +1,5 @@
-﻿@model AdoNetExample.Models.BookModel
+﻿@using AdoNetExample.UserControl
+@model AdoNetExample.Models.BookModel
 @{
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_MyLayout.cshtml";
@@ -45,3 +46,16 @@
 
 
     <label>Comments</label> @Html.TextArea("comments", null, 5, 10, null)*@
+
+
+    
+@myhtmlhelper.MyLabel("I accept the Agreement")<br />
+ 
+@Html.createUrControl("text")<br />
+@Html.createUrControl("file")<br />
+
+@helper labelbyrazzorcode(string content)
+{
+    <label>@content</label>
+}
+@labelbyrazzorcode("hi this is ali")
